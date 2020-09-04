@@ -60,14 +60,18 @@ function Body({ spotify }) {
           src={
             discover_weeklyimg
               ? discover_weeklyimg
-              : "https://justmenatalie.files.wordpress.com/2017/12/30771i040597211fa3701f.png"
+              : "https://image.slidesharecdn.com/copyofspotifydiscoverweekly-170701234254/95/spotify-discover-weekly-the-machine-learning-behind-your-music-recommendations-1-638.jpg?cb=1498952892"
           }
           alt="PlaceHolder"
         />
         <div className="body_infoText">
           <strong>Playlist </strong>
           <h2>Discover Weekly</h2>
-          <p>{discover_weekly?.description} </p>
+          <p>
+            {discover_weekly?.description
+              ? discover_weekly?.description
+              : "Description will go here"}
+          </p>
         </div>
       </div>
       <div className="body__songs">
