@@ -23,3 +23,16 @@ a:hover {
   background-color: #20c85b;
   border-color: #20c85b;
 }
+.login > button {
+  border-color: #1db954;
+  padding: 20px;
+  background-color: #1db954;
+  border-radius: 150px;
+  font-weight: 800;
+  color: white;
+  text-decoration: none;
+}
+button:hover {
+  background-color: #20c85b;
+  border-color: #20c85b;
+}

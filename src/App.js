@@ -9,7 +9,7 @@ import Login from "./Login";
 const s = new SpotifyWebApi();
 
 function App() {
-  const [{ token }, dispatch] = useStateValue();
+  const [{ token, escapetoken }, dispatch] = useStateValue();
 
   useEffect(() => {
     // Set token
@@ -44,6 +44,13 @@ function App() {
         });
       });
 
+      s.getMyDevices().then((devices) => {
+        dispatch({
+          type: "SET_DEVICEID",
+          device_id: devices,
+        });
+      });
+
       s.getPlaylist("37i9dQZEVXcVBkBAqvHDSs").then((response) =>
         dispatch({ type: "SET_DISCOVER_WEEKLY", discover_weekly: response })
       );
@@ -71,8 +78,7 @@ function App() {
 
   return (
     <div className="app">
-      {!token && <Login />}
-      {token && <Player spotify={s} />}
+      {token || escapetoken ? <Player spotify={s} /> : <Login />}
     </div>
   );
 }

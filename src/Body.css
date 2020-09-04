@@ -4,8 +4,11 @@
   height: 100vw;
   color: white;
   padding: 30px;
+  overflow-y: overlay;
 }
-
+.body::-webkit-scrollbar {
+  display: none;
+}
 .body_info {
   display: flex;
   align-items: flex-end;
