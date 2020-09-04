@@ -18,11 +18,13 @@
 .header__left > input {
   border: none;
   width: 100%;
+  outline-width: 0;
 }
 
 .header__right {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .header__right > h4 {

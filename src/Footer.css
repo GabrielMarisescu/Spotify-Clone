@@ -39,6 +39,7 @@
 }
 
 .footer__albumLogo {
+  cursor: pointer;
   height: 60px;
   width: 60px;
   margin-right: 20px;
@@ -61,4 +62,9 @@
 .footer_green:hover {
   transition: transform 0.2s ease-in-out;
   transform: scale(1.2) !important;
+  cursor: pointer;
+}
+
+.footer_songInfo {
+  cursor: pointer;
 }
